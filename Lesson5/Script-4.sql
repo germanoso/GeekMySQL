@@ -4,4 +4,5 @@
 -- Используйте таблицу профилей БД ВК
 
 USE vk;
-SELECT * FROM profiles WHERE MONTH(birthday) = 8 OR MONTH(birthday) = 3;
+-- Исправил
+SELECT * FROM profiles WHERE MONTHNAME(birthday) IN ('may', 'august');

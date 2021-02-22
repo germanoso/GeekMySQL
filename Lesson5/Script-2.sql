@@ -24,4 +24,8 @@ VALUES
   
 UPDATE users SET created_at = STR_TO_DATE(created_at, '%d.%m.%Y %H:%i');
 UPDATE users SET updated_at = STR_TO_DATE(updated_at, '%d.%m.%Y %H:%i');
+-- изменил тип столбцов 
+ALTER TABLE users MODIFY COLUMN created_at DATETIME;
+ALTER TABLE users MODIFY COLUMN updated_at DATETIME;
 SELECT * FROM users;
+DESCRIBE users;
